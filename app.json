@@ -1,0 +1,23 @@
+{
+  "name": "demos",
+  "scripts": {
+  },
+  "env": {
+    "HEROKU_POSTGRESQL_BROWN_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
