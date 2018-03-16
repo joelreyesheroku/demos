@@ -1,23 +1,15 @@
 {
-  "name": "demos",
-  "scripts": {
-  },
+  "name": "Heroku URL Shortener Demo App",
+  "description": "Demonstrates the generation of Shortened URLs based on user input, saving results to Heroku Postgres",
+  "website": "www.heroku.com",
+  "logo": "http://heroku-se-toolkit.herokuapp.com/images/enterprise.png",
+  "keywords": ["heroku", "url shortener"],
+  "repository": "https://github.com/baliles/shorturls",
   "env": {
-    "HEROKU_POSTGRESQL_BROWN_URL": {
-      "required": true
-    }
-  },
-  "formation": {
-    "web": {
-      "quantity": 2
-    }
-  },
-  "addons": [
-    "heroku-postgresql"
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ]
+    "DATABASE_URL": {
+      "required": true,
+      "description": "Already points to a demo Postgres DB to store URLs for you",
+      "value": "postgres://senbjiyhlyfbrq:3f4d03141fbf35bd7f683ce3b68d6717090a65ca2ebbd838403549a6fe272ace@ec2-54-235-177-45.compute-1.amazonaws.com:5432/d653bhina20026"
+      }
+    },
 }
